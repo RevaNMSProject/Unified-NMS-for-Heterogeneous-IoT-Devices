@@ -343,9 +343,6 @@ This project demonstrates:
 
 Educational project for NMS demonstration purposes.
 
-## 👤 Author
-
-Udayn - NMS Project 2025
 
 ---
 
