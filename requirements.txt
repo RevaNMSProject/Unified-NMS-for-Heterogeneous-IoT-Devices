@@ -1,0 +1,21 @@
+# Core dependencies for Unified NMS Project
+# MQTT Protocol
+paho-mqtt==1.6.1
+
+# SNMP Protocol
+pysnmp-lextudio==5.0.34
+pyasn1==0.4.8
+pycryptodomex==3.18.0
+
+# REST/RESTCONF
+flask==2.3.3
+requests==2.31.0
+
+# Data Processing
+python-dateutil==2.8.2
+
+# Dashboard
+flask-cors==4.0.0
+
+# Utilities
+python-dotenv==1.0.0

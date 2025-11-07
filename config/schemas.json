@@ -1,0 +1,23 @@
+{
+  "metric_schema": {
+    "description": "Unified telemetry data schema",
+    "example": {
+      "device_id": "device_001",
+      "parameter": "cpu_usage",
+      "value": 75.5,
+      "unit": "percent",
+      "timestamp": "2025-11-06T10:30:00Z"
+    }
+  },
+  "event_schema": {
+    "description": "Unified alarm/event schema",
+    "example": {
+      "device_id": "device_001",
+      "type": "threshold_exceeded",
+      "severity": "CRITICAL",
+      "state": "OPEN",
+      "message": "CPU usage exceeded 80%",
+      "timestamp": "2025-11-06T10:30:00Z"
+    }
+  }
+}

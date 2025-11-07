@@ -1,0 +1,56 @@
+{
+  "devices": [
+    {
+      "device_id": "snmp_device_001",
+      "device_type": "router",
+      "protocol": "SNMP",
+      "location": "DataCenter-A",
+      "ip": "127.0.0.1",
+      "port": 161,
+      "community": "public",
+      "oids": {
+        "cpu_usage": "1.3.6.1.4.1.2021.11.9.0",
+        "memory_usage": "1.3.6.1.4.1.2021.4.6.0",
+        "uptime": "1.3.6.1.2.1.1.3.0"
+      }
+    },
+    {
+      "device_id": "restconf_device_001",
+      "device_type": "switch",
+      "protocol": "RESTCONF",
+      "location": "DataCenter-B",
+      "base_url": "http://127.0.0.1:8080",
+      "username": "admin",
+      "password": "admin",
+      "endpoints": {
+        "interfaces": "/restconf/data/interfaces",
+        "system": "/restconf/data/system"
+      }
+    },
+    {
+      "device_id": "mqtt_sensor_001",
+      "device_type": "temperature_sensor",
+      "protocol": "MQTT",
+      "location": "Floor-1",
+      "broker": "127.0.0.1",
+      "port": 1883,
+      "topics": ["iot/temp1", "iot/humidity1"]
+    },
+    {
+      "device_id": "mqtt_sensor_002",
+      "device_type": "pressure_sensor",
+      "protocol": "MQTT",
+      "location": "Floor-2",
+      "broker": "127.0.0.1",
+      "port": 1883,
+      "topics": ["iot/pressure1"]
+    }
+  ],
+  "thresholds": {
+    "cpu_usage": {"warning": 50, "critical": 70},
+    "memory_usage": {"warning": 60, "critical": 80},
+    "temp_celsius": {"warning": 35, "critical": 50},
+    "humidity_percent": {"warning": 65, "critical": 80},
+    "pressure_kpa": {"warning": 95, "critical": 105}
+  }
+}
